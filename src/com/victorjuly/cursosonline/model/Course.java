@@ -3,7 +3,7 @@ package com.victorjuly.cursosonline.model;
 public class Course {
     
     public static enum Category {
-        TECNOLOGIA, DESIGN, COSTURA, CULINÁRIA, DESENHO;
+        TECNOLOGIA, DESIGN, COSTURA, CULINARIA, DESENHO;
     }
     
     private int id;
@@ -13,15 +13,18 @@ public class Course {
     private int duration;
     private String description;
     private Category type;
+    
+    private static int currentId = 0;
 
     public Course(String title, double price, String owner, int duration, String description, Category type) {
         this.title = title;
-        this.id = id;
+        this.id = currentId;
         this.price = price;
         this.owner = owner;
         this.duration = duration;
         this.description = description;
         this.type = type;
+        currentId++;
     }
     
     public int getId() {

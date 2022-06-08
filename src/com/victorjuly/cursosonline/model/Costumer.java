@@ -41,13 +41,16 @@ public class Costumer {
     private Occupation occupation;
     private PaymentInfo paymentInfo;
 
-    public Costumer(int id, String name, int age, KnowledgeLevel level, Occupation occupation, PaymentInfo paymentInfo) {
-        this.id = id;
+    private static int currentId = 0;
+    
+    public Costumer(String name, int age, KnowledgeLevel level, Occupation occupation, PaymentInfo paymentInfo) {
+        this.id = currentId;
         this.name = name;
         this.age = age;
         this.level = level;
         this.occupation = occupation;
         this.paymentInfo = paymentInfo;
+        currentId++;
     }
 
     public int getId() {

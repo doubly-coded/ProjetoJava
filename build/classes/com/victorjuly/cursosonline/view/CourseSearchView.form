@@ -55,31 +55,31 @@
                           <Component id="lblCourseSearchPrice" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnCourseSearchHigh" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCourseSearch" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCourseSearchLess" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCourseSearchMedia" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCourseSearchUp" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCourseSearchDescription1" min="-2" pref="284" max="-2" attributes="0"/>
-                          <Component id="comboBoxCourseSearchType" min="-2" pref="284" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtCourseSearchPrice" pref="284" max="32767" attributes="0"/>
+                          <Component id="comboBoxCourseSearchType" pref="284" max="32767" attributes="0"/>
+                          <Component id="btnCourseSearch" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnCourseSearchHigh" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnCourseSearchLess" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnCourseSearchMedia" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnCourseSearchUp" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="285" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="322" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <Component id="btnCourseSearchBack" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="btnCourseSearchBack" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtCourseSearchName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblCourseSearchName" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -96,7 +96,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtCourseSearchDescription1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCourseSearchPrice" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblCourseSearchPrice" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -115,12 +115,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnCourseSearchUp" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="325" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="325" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -155,17 +152,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblCostumerSearch">
-          <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="4">
-                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                <Column editable="true" title="Title 4" type="java.lang.Object"/>
-              </Table>
-            </Property>
-          </Properties>
+        <Component class="javax.swing.JTable" name="tblCursos">
         </Component>
       </SubComponents>
     </Container>
@@ -173,8 +160,11 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCourseSearchActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtCourseSearchDescription1">
+    <Component class="javax.swing.JTextField" name="txtCourseSearchPrice">
     </Component>
     <Component class="javax.swing.JLabel" name="lblCourseSearchPrice">
       <Properties>
@@ -192,21 +182,33 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Maior pre&#xe7;o"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCourseSearchHighActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCourseSearchLess">
       <Properties>
         <Property name="text" type="java.lang.String" value="Menor pre&#xe7;o"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCourseSearchLessActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCourseSearchMedia">
       <Properties>
         <Property name="text" type="java.lang.String" value="M&#xe9;dia dos pre&#xe7;os"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCourseSearchMediaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCourseSearchUp">
       <Properties>
         <Property name="text" type="java.lang.String" value="Acima da m&#xe9;dia dos pre&#xe7;os"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCourseSearchUpActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCourseSearchType">
       <Properties>
@@ -214,16 +216,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="comboBoxCourseSearchType">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

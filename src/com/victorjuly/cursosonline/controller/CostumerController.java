@@ -8,5 +8,10 @@ public class CostumerController extends Controller<Costumer> implements IContain
     public CostumerController() {
         super(CostumerController.class);
     }
+    
+    @Override
+    public void delete(int id) {
+        this.getContainer().removeIf(x -> x.getId() == id);
+    }
 
 }

@@ -16,4 +16,11 @@ public class CourseController extends Controller<Course> implements IContainer<C
         // pega todos esses numeros, soma e divide pela quantidade de cursos
         return getContainer().stream().map(Course::getPrice).reduce(0D, Double::sum)/getContainer().size();
     }
+
+    @Override
+    public void delete(int id) {
+        getContainer().removeIf(x -> x.getId() == id);
+    }
+    
+    
 }

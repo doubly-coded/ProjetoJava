@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JButton" name="btnCostumerFinalRegister">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cadastrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCostumerFinalRegisterActionPerformed"/>
+      </Events>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -23,100 +33,138 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="btnCostumerRegisterBack" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="lblCostumerRegisterLevel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="comboBoxRegisterLevel" min="-2" pref="284" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnCostumerRegisterBack" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
                               <Component id="lblCostumerRegisterType" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                               <Component id="comboBoxCostumerRegisterType" min="-2" pref="284" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="lblCostumerRegisterOcupation" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="comboBoxRegisterOcupation" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblCostumerSearchType3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCostumerSearchType2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCostumerSearchType4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCostumerSearchType1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtConta" pref="284" max="32767" attributes="0"/>
+                                  <Component id="txtAgencia" max="32767" attributes="0"/>
+                                  <Component id="txtCvc" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtValidade" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="lblCostumerRegisterAge" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtCostumerRegisterAge" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="botaoCadastrar" min="-2" pref="227" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="botaoExcluir" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblCostumerRegisterOcupation" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCostumerRegisterAge" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCostumerRegisterName" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCostumerRegisterLevel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCostumerRegisterType1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="lblCostumerRegisterName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtCostumerRegisterName" min="-2" pref="284" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnCostumerFinalRegister" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="comboBoxRegisterOcupation" alignment="1" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="txtCostumerRegisterAge" alignment="1" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="txtCostumerRegisterName" alignment="1" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="comboBoxRegisterLevel" alignment="1" min="-2" pref="284" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="58" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="579" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="btnCostumerRegisterBack" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtCostumerRegisterName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblCostumerRegisterName" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtCostumerRegisterAge" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblCostumerRegisterAge" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCostumerRegisterOcupation" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="comboBoxRegisterOcupation" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="comboBoxRegisterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblCostumerRegisterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblCostumerRegisterType" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="comboBoxCostumerRegisterType" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtCostumerRegisterName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerRegisterName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtCostumerRegisterAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerRegisterAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="comboBoxRegisterOcupation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerRegisterOcupation" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="comboBoxRegisterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerRegisterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="lblCostumerRegisterType1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="comboBoxCostumerRegisterType" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerRegisterType" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtAgencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerSearchType1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtCvc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerSearchType3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtConta" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerSearchType2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtValidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCostumerSearchType4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="botaoCadastrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botaoExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="360" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-              <Component id="btnCostumerFinalRegister" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="100" max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JComboBox" name="comboBoxRegisterLevel">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -126,32 +174,17 @@
         <Property name="text" type="java.lang.String" value="Tipo de pagamento:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnCostumerFinalRegister">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cadastrar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCostumerFinalRegisterActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="btnCostumerRegisterBack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCostumerRegisterBackActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCostumerRegisterName">
     </Component>
     <Component class="javax.swing.JComboBox" name="comboBoxCostumerRegisterType">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -179,19 +212,79 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="comboBoxRegisterOcupation">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCostumerSearchType1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Agencia:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtAgencia">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCvc">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtValidade">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtConta">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCostumerSearchType2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Conta:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCostumerSearchType4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Validade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCostumerSearchType3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CVC"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCostumerRegisterType1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pagamento:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="botaoCadastrar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cadastrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoCadastrarActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="tblClientes">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="botaoExcluir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Excluir"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoExcluirActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

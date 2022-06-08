@@ -14,11 +14,13 @@ import java.util.stream.*;
  * */
 public abstract class Controller<T> implements IContainer<T> {
 
-    private static Map<Class<? extends Controller<?>>, Controller<?>> controllerRegistry;
+    private static Map<Class<? extends Controller<?>>, Controller<?>> controllerRegistry = new HashMap<>();
 
     public static <U extends Controller<?>> Controller<U> registerController(Class<U> clazz) {
         try {
-            return (Controller<U>) clazz.newInstance();
+            Controller<U> controller = (Controller<U>) clazz.newInstance();
+            controllerRegistry.put(clazz, controller);
+            return controller;
         } catch(Exception ex) {
             ex.printStackTrace();
         }
@@ -61,7 +63,7 @@ public abstract class Controller<T> implements IContainer<T> {
     *
     * A variável "course" será substituida por cada elemento da lista que ele vai testar
     * */
-    public List<T> find(Predicate<T>... conditions) {
+    public List<T> find(Collection<Predicate<T>> conditions) {
         List<T> filtered = (List<T>) getContainer();
         for(Predicate<T> cond : conditions) {
             filtered = filtered.stream().filter(cond).collect(Collectors.toList());
@@ -76,4 +78,6 @@ public abstract class Controller<T> implements IContainer<T> {
     public void delete(T param) {
         container.remove(param);
     }
+    
+    public abstract void delete(int id);
 }
