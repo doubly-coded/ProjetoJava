@@ -10,9 +10,12 @@ import com.victorjuly.cursosonline.controller.CostumerController;
 import com.victorjuly.cursosonline.controller.CourseController;
 import com.victorjuly.cursosonline.exception.EmptyStringException;
 import com.victorjuly.cursosonline.exception.NegativeNumberException;
+import com.victorjuly.cursosonline.model.Costumer;
 import com.victorjuly.cursosonline.model.Course;
 import com.victorjuly.cursosonline.util.Util;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -225,7 +228,21 @@ public class CourseRegisterView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Selecione um curso para excluir");
             return;
         }
-        controller.delete(Integer.parseInt(tblCursos.getValueAt(tblCursos.getSelectedRow(), 0).toString()));
+        
+        List<Course> possible = controller.find(Collections.singleton(x -> x.getId() == Integer.parseInt(tblCursos.getValueAt(tblCursos.getSelectedRow(), 0).toString())));
+        if(possible.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum curso com esse id encontrado.");
+            return;
+        }
+        
+        Course deleted = possible.get(0);
+        
+        
+        if(JOptionPane.showConfirmDialog(null, "Você tem certeza que deseja deletar o curso " + deleted.getTitle() + "?") != 0) {
+            return;
+        }
+        
+        controller.delete(deleted.getId());
         JOptionPane.showMessageDialog(null, "Curso excluído com sucesso!");
         updateTable();
     }//GEN-LAST:event_btnExcluirActionPerformed

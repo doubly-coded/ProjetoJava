@@ -17,8 +17,10 @@ import com.victorjuly.cursosonline.controller.CostumerController;
 import com.victorjuly.cursosonline.exception.NumericFieldException;
 import com.victorjuly.cursosonline.util.Util;
 import java.awt.event.WindowEvent;
+import java.util.Collections;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import java.util.List;
 
 
 public class CostumerRegisterView extends javax.swing.JFrame {
@@ -352,7 +354,21 @@ public class CostumerRegisterView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Selecione um cliente para excluir");
             return;
         }
-        controller.delete(Integer.parseInt(tblClientes.getValueAt(tblClientes.getSelectedRow(), 0).toString()));
+        
+        List<Costumer> possible = controller.find(Collections.singleton(x -> x.getId() == Integer.parseInt(tblClientes.getValueAt(tblClientes.getSelectedRow(), 0).toString())));
+        if(possible.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum cliente com esse id encontrado.");
+            return;
+        }
+        
+        Costumer deleted = possible.get(0);
+        
+        
+        if(JOptionPane.showConfirmDialog(null, "Você tem certeza que deseja deletar o cliente " + deleted.getName() + "?") != 0) {
+            return;
+        }
+        
+        controller.delete(deleted.getId());
         JOptionPane.showMessageDialog(null, "Cliente excluído com sucesso!");
         updateTable();
     }//GEN-LAST:event_botaoExcluirActionPerformed
